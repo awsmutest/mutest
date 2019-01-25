@@ -1,4 +1,7 @@
 // use the express framework
+
+require('dotenv').config()
+
 var express = require('express');
 var app = express();
 
@@ -10,7 +13,7 @@ console.log('The message is:', process.env.AZ);
 console.log('The hash is: %s', code_hash);
 
 var ipaddress = process.env.IP;
-var message = process.env.AZ;
+var message = process.env.TEST;
 
 // morgan: generate apache style logs to the console
 var morgan = require('morgan')
@@ -24,7 +27,7 @@ app.get('/', function (req, res) {
   res.set({
   'Content-Type': 'text/plain'
 })
-  res.send(`Node.js backend: Hello! from ${message} commit ${code_hash}`);
+  res.send(`Node.js backend: Hello!! from ${message} commit ${code_hash}`);
   // res.send(`Hello World! from ${ipaddress} in AZ-${az} which has been up for ` + process.uptime() + 'ms');
 });
 
