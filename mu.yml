@@ -1,7 +1,7 @@
 ---
 service:
     environment:
-     - TEST= Martin594329
+    # - TEST= Martin594329
   desiredCount: 3
   maxSize: 6
   port: 3000
