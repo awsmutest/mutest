@@ -1,7 +1,7 @@
 ---
 service: 
   environment: 
-    TEST: Martin
+  TEST: Martin
 desiredCount: 3
 discoveryTTL: 5
 maxSize: 6
