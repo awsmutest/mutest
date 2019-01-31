@@ -6,3 +6,5 @@ service:
   port: 3000
   environment: 
     TEST: Martin
+  pipeline:
+    kmsKey: arn:aws:kms:eu-west-1:242887524062:key/42410140-0cce-4a0a-841f-9f08cc5fee6c
