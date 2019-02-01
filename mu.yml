@@ -1,8 +1,8 @@
 ---
 service: 
-  desiredCount: 5
+  desiredCount: 3
   discoveryTTL: 5
-  maxSize: 10
+  maxSize: 6
   port: 3000
 
   pipeline:
