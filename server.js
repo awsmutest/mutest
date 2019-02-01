@@ -1,5 +1,7 @@
 // use the express framework
 
+
+
 // const urlParams = new URLSearchParams(window.location.search);
 // const myParam = urlParams.get('param1');
 
@@ -36,8 +38,16 @@ app.get('/', function (req, res) {
 var server = app.listen(3000, function() {
   var port = server.address().port;
   console.log('Example app listening on port %s!', port);
-  console.log(myParam)
+//  console.log(myParam)
 });
 
 // export the server to make tests work
 module.exports = server;
+
+
+function getUrlParameter(param1) {
+  name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+  var regex = new RegExp('[\\?&]' + param1 + '=([^&#]*)');
+  var results = regex.exec(location.search);
+  return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+};
