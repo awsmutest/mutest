@@ -1,7 +1,7 @@
 // use the express framework
 
-const urlParams = new URLSearchParams(window.location.search);
-const myParam = urlParams.get('param1');
+// const urlParams = new URLSearchParams(window.location.search);
+// const myParam = urlParams.get('param1');
 
 var express = require('express');
 var app = express();
