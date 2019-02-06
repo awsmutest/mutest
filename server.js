@@ -52,3 +52,4 @@ function getUrlParameter(param1) {
   return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
 console.log(results)
+//
