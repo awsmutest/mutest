@@ -1,9 +1,10 @@
 // use the express framework
 
 
-
+//  ---------------------
 // const urlParams = new URLSearchParams(window.location.search);
 // const myParam = urlParams.get('param1');
+//  ---------------------
 
 var express = require('express');
 var app = express();
@@ -43,7 +44,7 @@ var server = app.listen(3000, function() {
 // export the server to make tests work
 module.exports = server;
 
-
+// ----------------------------------------------
 // function getUrlParameter(param1) {
 //  name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
 //  var regex = new RegExp('[\\?&]' + param1 + '=([^&#]*)');
@@ -51,4 +52,4 @@ module.exports = server;
 //  return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 //  console.log(param1);
 //};
-//
+// ----------------------------------------------
