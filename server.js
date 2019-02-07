@@ -44,11 +44,11 @@ var server = app.listen(3000, function() {
 module.exports = server;
 
 
-function getUrlParameter(param1) {
-  name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-  var regex = new RegExp('[\\?&]' + param1 + '=([^&#]*)');
-  var results = regex.exec(location.search);
-  return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-  console.log(param1);
-};
+// function getUrlParameter(param1) {
+//  name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+//  var regex = new RegExp('[\\?&]' + param1 + '=([^&#]*)');
+//  var results = regex.exec(location.search);
+//  return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+//  console.log(param1);
+//};
 //
