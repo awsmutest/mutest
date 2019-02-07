@@ -7,3 +7,10 @@ service:
 
   #pipeline:
   #  kmsKey: arn:aws:kms:eu-west-1:242887524062:key/37924a1a-4980-4e28-8b58-db89c374553d
+
+  Ec2Instance:
+  Type: AWS::EC2::Instance
+  Properties:
+    InstanceType:
+      Ref: InstanceTypeParameter
+    ImageId: ami-0ff8a91507f77f867
