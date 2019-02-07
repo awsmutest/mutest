@@ -38,7 +38,6 @@ app.get('/', function (req, res) {
 var server = app.listen(3000, function() {
   var port = server.address().port;
   console.log('Example app listening on port %s!', port);
-//  console.log(myParam)
 });
 
 // export the server to make tests work
@@ -50,5 +49,6 @@ function getUrlParameter(param1) {
   var regex = new RegExp('[\\?&]' + param1 + '=([^&#]*)');
   var results = regex.exec(location.search);
   return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+  console.log(param1);
 };
 //
