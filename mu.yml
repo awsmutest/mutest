@@ -5,5 +5,5 @@ service:
   maxSize: 6
   port: 3000
 
-  pipeline:
-    kmsKey: arn:aws:kms:eu-west-1:242887524062:key/37924a1a-4980-4e28-8b58-db89c374553d
+  #pipeline:
+  #  kmsKey: arn:aws:kms:eu-west-1:242887524062:key/37924a1a-4980-4e28-8b58-db89c374553d
