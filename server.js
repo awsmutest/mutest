@@ -2,8 +2,9 @@
 
 
 //  ---------------------
-// const urlParams = new URLSearchParams(window.location.search);
-// const myParam = urlParams.get('param1');
+ const urlParams = new URLSearchParams(window.location.search);
+ const myParam = urlParams.get('para1');
+ console.log(para1);
 //  ---------------------
 
 var express = require('express');
@@ -45,11 +46,13 @@ var server = app.listen(3000, function() {
 module.exports = server;
 
 
- function getUrlParameter(para1) {
-  name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-  var regex = new RegExp('[\\?&]' + param1 + '=([^&#]*)');
-  var results = regex.exec(location.search);
-  return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-  console.log(para1);
-};
+// ----------------------------------------------
+
+// function getUrlParameter(para1) {
+//  name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+//  var regex = new RegExp('[\\?&]' + param1 + '=([^&#]*)');
+//  var results = regex.exec(location.search);
+//  return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+//  console.log(para1);
+//};
 // ----------------------------------------------
