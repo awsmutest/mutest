@@ -5,8 +5,8 @@ service:
   maxSize: 6
   port: 3000
 
-  enviroment:
-    para1: 'Martin-test'
+  #enviroment:
+  #  para1: 'Martin-test'
 
   pipeline:
     kmsKey: arn:aws:iam::242887524062:user/martin_siitmaa
