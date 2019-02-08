@@ -50,6 +50,6 @@ module.exports = server;
   var regex = new RegExp('[\\?&]' + param1 + '=([^&#]*)');
   var results = regex.exec(location.search);
   return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-  console.log(param1);
+  console.log(para1);
 };
 // ----------------------------------------------
