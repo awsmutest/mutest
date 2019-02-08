@@ -3,7 +3,7 @@ Resources:
   BasicParameter:
     Type: "AWS::SSM::Parameter"
     Properties:
-      Name: "command"
+      Name: "para2"
       Type: "SecureString"
       Value: "date"
       Description: "SSM Parameter for running date command."
