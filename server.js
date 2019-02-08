@@ -2,9 +2,9 @@
 
 
 //  ---------------------
- const urlParams = new URLSearchParams(window.location.search);
- const myParam = urlParams.get('para1');
- console.log(para1);
+// const urlParams = new URLSearchParams(window.location.search);
+// const myParam = urlParams.get('para1');
+// console.log(para1);
 //  ---------------------
 
 var express = require('express');
