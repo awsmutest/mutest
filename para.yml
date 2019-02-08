@@ -1,0 +1,10 @@
+Description: "Create SSM Parameter"
+Resources:
+  BasicParameter:
+    Type: "AWS::SSM::Parameter"
+    Properties:
+      Name: "command"
+      Type: "SecureString"
+      Value: "date"
+      Description: "SSM Parameter for running date command."
+      AllowedPattern: "^[a-zA-Z]{1,10}$"
