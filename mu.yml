@@ -9,4 +9,4 @@ service:
   #  para1: 'Martin-test'
 
   pipeline:
-    kmsKey: arn:aws:iam::242887524062:user/martin_siitmaa
+    kmsKey: arn:aws:kms:eu-west-1:242887524062:key/06dd183d-e713-4bd3-b908-de8187f98271
