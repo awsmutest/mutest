@@ -48,5 +48,5 @@ module.exports = server;
   var results = regex.exec(location.search);
   return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
   console.log(para2);
-//};
+};
 // ----------------------------------------------
