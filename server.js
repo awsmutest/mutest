@@ -10,6 +10,7 @@ console.log (code_hash);
 console.log('The IPADDRESS is:', process.env.IP);
 console.log('The message is:', process.env.AZ);
 console.log('The hash is: %s', code_hash);
+console.log(process.env.value ,'test2');
 
 var ipaddress = process.env.IP;
 var message = process.env.TEST;
@@ -38,14 +39,3 @@ var server = app.listen(3000, function() {
 
 // export the server to make tests work
 module.exports = server;
-
-
-// ----------------------------------------------
-// function getUrlParameter(para2) {
-//  name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-//  var regex = new RegExp('[\\?&]' + para2 + '=([^&#]*)');
-//  var results = regex.exec(location.search);
-//  return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-//  console.log(para2);
-//};
-// ----------------------------------------------
