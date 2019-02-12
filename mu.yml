@@ -5,7 +5,7 @@ service:
   maxSize: 6
   port: 3000
   environment:
-      value: AQICAHgDsZug8RRB78xFwz16erXa/Jh34TDzxiR4ZBp9FSrzUwEKRFjEm8QxviQ0isv8+yq6AAAAajBoBgkqhkiG9w0BBwagWzBZAgEAMFQGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMVOmIwoB14abDtUyoAgEQgCc9s1uv4TO0q243vA+JmM0jsqxBZLV9H/OUXdnFmTSXxmb1Z7qc3Uw=
+      value: ${AQICAHgDsZug8RRB78xFwz16erXa/Jh34TDzxiR4ZBp9FSrzUwEKRFjEm8QxviQ0isv8+yq6AAAAajBoBgkqhkiG9w0BBwagWzBZAgEAMFQGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMVOmIwoB14abDtUyoAgEQgCc9s1uv4TO0q243vA+JmM0jsqxBZLV9H/OUXdnFmTSXxmb1Z7qc3Uw=}
 
   pipeline:
      awsKmsKeyArn: arn:aws:kms:eu-west-1:242887524062:key/06dd183d-e713-4bd3-b908-de8187f98271
