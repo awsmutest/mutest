@@ -44,7 +44,7 @@ module.exports = server;
 // ------------------------------------------------
 
 'use strict';
-const aws = require('aws-sdk');
+const aws = require('@aws-sdk');
 var kms = new aws.KMS();
  
 exports.martin = (event, context, callback) => {
