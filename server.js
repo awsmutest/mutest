@@ -54,17 +54,5 @@ exports.martin = (event, context, callback) => {
  
     var value = data.Plaintext.toString('ascii');
  
-    /*
-     * Do stuff with plaintext password
-     */
- 
-    callback(null, {
-      statusCode: 200,
-      body: JSON.stringify("hello"),
-      headers: {
-          'Content-Type': 'application/json',
-      },
-    });
- 
   });
 };
