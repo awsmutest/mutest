@@ -43,22 +43,3 @@ module.exports = server;
 
 // ------------------------------------------------
 
-function decrypt(buffer) {
-  const kms = new aws.KMS({
-      accessKeyId: 'AKIAJYXIP6RV7IYMMHZA',
-      secretAccessKey: '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',
-      region: 'eu-west-1'
-  });
-  return new Promise((resolve, reject) => {
-      const params = {
-          CiphertextBlob: buffer// The data to dencrypt.
-      };
-      kms.decrypt(params, (err, data) => {
-          if (err) {
-              reject(err);
-          } else {
-              resolve(data.Plaintext);
-          }
-      });
-  });
-}
