@@ -39,3 +39,32 @@ var server = app.listen(3000, function() {
 
 // export the server to make tests work
 module.exports = server;
+
+
+// ------------------------------------------------
+
+'use strict';
+const aws = require('aws-sdk');
+var kms = new aws.KMS();
+ 
+exports.martin = (event, context, callback) => {
+  kms.decrypt({CiphertextBlob:
+    new Buffer(process.env.value, 'base64')},
+    (err, data) => {
+ 
+    var value = data.Plaintext.toString('ascii');
+ 
+    /*
+     * Do stuff with plaintext password
+     */
+ 
+    callback(null, {
+      statusCode: 200,
+      body: JSON.stringify("hello"),
+      headers: {
+          'Content-Type': 'application/json',
+      },
+    });
+ 
+  });
+};
