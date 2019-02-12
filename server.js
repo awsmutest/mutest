@@ -42,17 +42,3 @@ module.exports = server;
 
 
 // ------------------------------------------------
-
-'use strict';
-const aws = require('@aws-sdk');
-var kms = new aws.KMS();
- 
-exports.martin = (event, context, callback) => {
-  kms.decrypt({CiphertextBlob:
-    new Buffer(process.env.value, 'base64')},
-    (err, data) => {
- 
-    var value = data.Plaintext.toString('ascii');
- 
-  });
-};
