@@ -42,4 +42,11 @@ module.exports = server;
 
 
 // ------------------------------------------------
-
+const kmsClient = new AWS.KMS();
+const CiphertextBlob = 'AQICAHgDsZug8RRB78xFwz16erXa/Jh34TDzxiR4ZBp9FSrzUwEKRFjEm8QxviQ0isv8+yq6AAAAajBoBgkqhkiG9w0BBwagWzBZAgEAMFQGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMVOmIwoB14abDtUyoAgEQgCc9s1uv4TO0q243vA+JmM0jsqxBZLV9H/OUXdnFmTSXxmb1Z7qc3Uw=';
+kmsClient.decrypt({ CiphertextBlob }, (err, data) => {
+  if (err) console.log(err, err.stack); // an error occurred
+  else {
+    const { Plaintext } = data;
+  }
+});
