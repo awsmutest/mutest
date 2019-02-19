@@ -1,5 +1,20 @@
 #!/bin/bash
 
+
+
+apt-get -y install python2.7 curl
+curl -O https://bootstrap.pypa.io/get-pip.py
+python2.7 get-pip.py
+pip install awscli
+# Getting region
+EC2_AVAIL_ZONE=`curl -s http://169.254.169.254/latest/meta-data/placement/availability-zone`
+EC2_REGION="`echo \"$EC2_AVAIL_ZONE\" | sed -e 's:\([0-9][0-9]*\)[a-z]*\$:\\1:'`"
+# Trying to retrieve parameters from the EC2 Parameter Store
+PRODTEST_WITH_ENCRYPTION=`aws ssm get-parameters --names prodtestpara --with-decryption --region $EC2_REGION --output text 2>&1`
+PRODTEST_WITHOUT_ENCRYPTION=`aws ssm get-parameters --names prodtestpara --no-with-decryption --region $EC2_REGION --output text 2>&1`
+
+
+
 set -x
 
 IP=$(hostname -i)
