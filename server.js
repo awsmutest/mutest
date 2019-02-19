@@ -13,7 +13,7 @@ console.log('The hash is: %s', code_hash);
 console.log(process.env.prodtestpara, 'test2');
 
 var ipaddress = process.env.IP;
-var message = process.env.TEST;
+var message = process.env.prodtestpara;
 
 // morgan: generate apache style logs to the console
 var morgan = require('morgan')
