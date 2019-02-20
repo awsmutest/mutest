@@ -4,8 +4,8 @@ service:
   discoveryTTL: 5
   maxSize: 6
   port: 3000
-  env:
-    parameter-store: "AQICAHjgzasmMDOtGswJneDcRB1an/xMNTqe+jzyTIurL1grhQE0eCcLxknYBpWn8d/vHoSeAAAAaTBnBgkqhkiG9w0BBwagWjBYAgEAMFMGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMkSsKehPnt5X4ijiVAgEQgCbA9E1Jjwuz0dWLu/NvT8zDsLDkBE8X1v03/tHygmSLZULQR65xYA=="
+ # env:
+ #   parameter-store: "AQICAHjgzasmMDOtGswJneDcRB1an/xMNTqe+jzyTIurL1grhQE0eCcLxknYBpWn8d/vHoSeAAAAaTBnBgkqhkiG9w0BBwagWjBYAgEAMFMGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMkSsKehPnt5X4ijiVAgEQgCbA9E1Jjwuz0dWLu/NvT8zDsLDkBE8X1v03/tHygmSLZULQR65xYA=="
     
 
   pipeline:

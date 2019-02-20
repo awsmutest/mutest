@@ -15,7 +15,6 @@ phases:
       #- npm install
   build:
     commands:
-      - echo ${AQICAHjgzasmMDOtGswJneDcRB1an/xMNTqe+jzyTIurL1grhQE0eCcLxknYBpWn8d/vHoSeAAAAaTBnBgkqhkiG9w0BBwagWjBYAgEAMFMGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMkSsKehPnt5X4ijiVAgEQgCbA9E1Jjwuz0dWLu/NvT8zDsLDkBE8X1v03/tHygmSLZULQR65xYA==}
       #- echo '***** run tests:'
       #- npm test -- > testresult.txt
       # - docker build -t myimage .
