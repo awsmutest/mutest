@@ -10,10 +10,10 @@ console.log (code_hash);
 console.log('The IPADDRESS is:', process.env.IP);
 console.log('The message is:', process.env.AZ);
 console.log('The hash is: %s', code_hash);
-console.log(process.env.prodtestpara, 'test2');
+console.log(process.env.parameter, 'test2');
 
 var ipaddress = process.env.IP;
-var message = process.env.prodtestpara;
+var message = process.env.parameter;
 
 // morgan: generate apache style logs to the console
 var morgan = require('morgan')
