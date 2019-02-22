@@ -19,6 +19,8 @@ phases:
       #- npm install
   build:
     commands:
+      - echo '***** This is the current env:'
+      - printenv
       #- echo '***** run tests:'
       #- npm test -- > testresult.txt
       # - docker build -t myimage .
@@ -26,6 +28,8 @@ phases:
     commands:
       - printf '[{"name":"example-backend","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
       - echo $IMAGE_TAG > code_hash.txt
+      - echo '***** This is the current env:'
+      - printenv
       # - docker pull anchore/cli
       # - docker run -d -v $(pwd):/source-dir -v /var/run/docker.sock:/var/run/docker.sock --name anchore anchore/cli:latest
       # - docker exec anchore anchore feeds sync
