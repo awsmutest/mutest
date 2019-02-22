@@ -5,8 +5,7 @@ service:
   maxSize: 6
   port: 3000
   environment:
-      $ref: 'buildspec.yml'
-         parameter: ${env:PARAMETER}
+     parameter: ${env:PARAMETER}
     
 
   pipeline:
