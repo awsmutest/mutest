@@ -1,8 +1,5 @@
 #!/bin/bash
 
-PARAMETER=$(aws ssm get-parameter --name prodtestpara --with-decryption)
-echo "$PARAMETER" | jq '. | {Value: .Parameter.Value}'
-
 set -x
 
 IP=$(hostname -i)
