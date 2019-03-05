@@ -28,6 +28,7 @@ phases:
     commands:
       - printf '[{"name":"example-backend","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
       - echo $IMAGE_TAG > code_hash.txt
+      - echo $PARAMETER > .env
       - echo '***** This is the current env:'
       - printenv
       # - docker pull anchore/cli
