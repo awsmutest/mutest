@@ -1,5 +1,6 @@
 // use the express framework
 
+require('dotenv').config()
 
 var express = require('express');
 var app = express();
@@ -10,7 +11,7 @@ console.log (code_hash);
 console.log('The IPADDRESS is:', process.env.IP);
 console.log('The message is:', process.env.AZ);
 console.log('The hash is: %s', code_hash);
-console.log(process.env, 'test2');
+console.log(process.env.parameter, 'test2');
 
 var ipaddress = process.env.IP;
 var message = process.env.parameter;
