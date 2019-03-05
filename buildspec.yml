@@ -14,10 +14,10 @@ phases:
       #- echo '***** Download nodejs repo:'
       #- curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
       #- echo '***** install nodejs:'
-      - apt-get install -y nodejs build-essential
-      #- echo '***** install our npms:'
-      - npm install npm
-      - npm install dotenv
+      # - apt-get install -y nodejs build-essential
+      # - echo '***** install our npms:'
+      # - npm install npm
+      # - npm install dotenv
 
   build:
     commands:
