@@ -11,7 +11,7 @@ require('dotenv').config()
 // console.log ('parameter on:', parameter);
 console.log('The IPADDRESS is:', process.env.IP);
 console.log('The message is:', process.env.AZ);
-console.log('The hash is: %s', code_hash);
+// console.log('The hash is: %s', code_hash);
 console.log(process.env, 'test2');
 
 var ipaddress = process.env.IP;
