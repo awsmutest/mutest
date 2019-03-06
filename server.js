@@ -2,7 +2,7 @@
 
 var express = require('express');
 var app = express();
-require('dotenv').config()
+require('dotenv').config({ path: './.env' })
 
 // var fs = require('fs');
 // var parameter = fs.readFileSync('.env','utf8');
