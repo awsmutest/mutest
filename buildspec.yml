@@ -9,6 +9,7 @@ phases:
       - export ACCOUNT=$(echo $CODEBUILD_BUILD_ARN |cut -f5 -d:)
       - PARAMETER=$(aws ssm get-parameter --name prodtestpara --with-decryption | jq -r '.[] | .Value')
       - echo "$PARAMETER"
+      - export $PARAMETER
       - echo '***** This is the current env:'
       - printenv
       #- echo '***** Download nodejs repo:'
