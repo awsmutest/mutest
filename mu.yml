@@ -4,14 +4,15 @@ service:
   discoveryTTL: 5
   maxSize: 6
   port: 3000
-  services:
-    env_file:
-      - ./.env
   environment:
     parameter: ${env:PARAMETER}
 
   pipeline:
      kmsKey: arn:aws:kms:eu-west-1:242887524062:key/45998ff3-cf6d-4438-b342-f1de49828225
+
+env_file:
+  - ./.env
+
 #    environment:
 #      value: AQICAHgDsZug8RRB78xFwz16erXa/Jh34TDzxiR4ZBp9FSrzUwEKRFjEm8QxviQ0isv8+yq6AAAAajBoBgkqhkiG9w0BBwagWzBZAgEAMFQGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMVOmIwoB14abDtUyoAgEQgCc9s1uv4TO0q243vA+JmM0jsqxBZLV9H/OUXdnFmTSXxmb1Z7qc3Uw=
 # awsKmsKeyArn
