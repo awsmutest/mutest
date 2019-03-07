@@ -5,7 +5,9 @@ service:
   maxSize: 6
   port: 3000
   environment:
-    parameter: ${env:PARAMETER} 
+    env_file:
+      - .env
+    parameter: ${env:PARAMETER}
 
   pipeline:
      kmsKey: arn:aws:kms:eu-west-1:242887524062:key/45998ff3-cf6d-4438-b342-f1de49828225
