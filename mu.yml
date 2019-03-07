@@ -4,9 +4,9 @@ service:
   discoveryTTL: 5
   maxSize: 6
   port: 3000
+  env_file:
+    - .env
   environment:
-    env_file:
-      - .env
     parameter: ${env:PARAMETER}
 
   pipeline:
