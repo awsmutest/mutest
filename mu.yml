@@ -6,8 +6,8 @@ service:
   port: 3000
   pipeline:
      kmsKey: arn:aws:kms:eu-west-1:242887524062:key/45998ff3-cf6d-4438-b342-f1de49828225
-  environment:
-     parameter: ${ref:PARAMETER}
+  # environment:
+  #    parameter: ${PARAMETER}
 
 #env_file:
 #  - ./.env

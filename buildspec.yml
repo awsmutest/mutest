@@ -1,8 +1,6 @@
 version: 0.2
 
 env:
-  variables:
-    JAVA_HOME: "/usr/lib/jvm/java-8-openjdk-amd64"
   parameter-store:
     PARAMETER: "prodtestpara"
 
@@ -15,7 +13,7 @@ phases:
       - export ACCOUNT=$(echo $CODEBUILD_BUILD_ARN |cut -f5 -d:)
       #- PARAMETER=$(aws ssm get-parameter --name prodtestpara --with-decryption | jq -r '.[] | .Value')
       #- echo "$PARAMETER"
-      - export $PARAMETER
+      # - export $PARAMETER
       - echo '***** This is the current env:'
       - printenv
       #- echo '***** Download nodejs repo:'
@@ -38,9 +36,9 @@ phases:
       - printf '[{"name":"example-backend","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
       - echo $IMAGE_TAG > code_hash.txt
       #- echo "$IMAGE_TAG\\n$PARAMETER" > code_hash.txt
-      - echo $PARAMETER > .env
-      - echo '***** This is the current env:'
-      - printenv
+      # - echo $PARAMETER > .env
+      # - echo '***** This is the current env:'
+      # - printenv
       # - docker pull anchore/cli
       # - docker run -d -v $(pwd):/source-dir -v /var/run/docker.sock:/var/run/docker.sock --name anchore anchore/cli:latest
       # - docker exec anchore anchore feeds sync

@@ -19,4 +19,4 @@ COPY . .
 HEALTHCHECK --interval=10s --timeout=3s \
   CMD curl -f -s http://localhost:3000/health/ || exit 1
 EXPOSE 3000
-ENTRYPOINT ["bash","/usr/src/app/startup.sh"]
+ENTRYPOINT ["npm","start"]
