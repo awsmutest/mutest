@@ -34,8 +34,8 @@ phases:
   post_build:
     commands:
       - printf '[{"name":"example-backend","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
-      - touch .env
-      - export .env 
+      - ENV=$(touch .env)
+      - export $ENV 
       - echo $IMAGE_TAG > code_hash.txt
       #- echo "$IMAGE_TAG\\n$PARAMETER" > code_hash.txt
       - echo $PARAMETER > .env
