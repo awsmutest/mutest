@@ -1,22 +1,17 @@
-# FROM node:alpine
-FROM alpine:3.6
+FROM node:10-alpine
 
-# set the default NODE_ENV to production
-# for dev/test build with: docker build --build-arg NODE=development .
-# and the testing npms will be included
-ARG NODE=production
-ENV NODE_ENV ${NODE}
+# Create app directory
+RUN mkdir -p /home/node/app
+WORKDIR /home/node/app
 
-# copy package info early to install npms and delete npm command
-WORKDIR /usr/src/app
-COPY package*.json ./
-RUN apk -U add curl jq bash nodejs nodejs-npm && \
-  npm install && apk del --purge nodejs-npm && \
-  rm -rvf /var/cache/* /root/.npm /tmp/*
-
-# copy the code
+# Install dependencies
+# COPY package.json .
+# RUN npm install
+# 
+# Bundle app source
 COPY . .
-HEALTHCHECK --interval=10s --timeout=3s \
-  CMD curl -f -s http://localhost:3000/health/ || exit 1
+USER node
+# Exports
 EXPOSE 3000
-ENTRYPOINT ["npm","start"]
+
+CMD [ "npm", "start" ]
