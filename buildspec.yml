@@ -35,10 +35,10 @@ phases:
     commands:
       - printf '[{"name":"example-backend","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
       - ENV=$(touch .env)
-      - export $ENV 
       - echo $IMAGE_TAG > code_hash.txt
       #- echo "$IMAGE_TAG\\n$PARAMETER" > code_hash.txt
       - echo $PARAMETER > .env
+      - export $ENV 
       # - echo '***** This is the current env:'
       # - printenv
       # - docker pull anchore/cli
