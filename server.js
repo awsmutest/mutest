@@ -2,12 +2,14 @@
 
 var express = require('express');
 var app = express();
-require('dotenv').config({ path: './.env' })
+require('dotenv').config()
+const path = require('path')
 
 var fs = require('fs');
 var parameterr = fs.readFileSync('.env','utf8');
 // var code_hash = fs.readFileSync('code_hash.txt','utf8');
 // console.log (code_hash);
+console.log(path.resolve(process.cwd(), '.env'))
 console.log ('parameter on:', parameterr);
 console.log('The IPADDRESS is:', process.env.IP);
 console.log('The message is:', process.env.AZ);
