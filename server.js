@@ -4,8 +4,8 @@ var express = require('express');
 var app = express();
 require('dotenv').config({ path: './.env' })
 
-// var fs = require('fs');
- var parameterr = fs.readFileSync('.env','utf8');
+var fs = require('fs');
+var parameterr = fs.readFileSync('.env','utf8');
 // var code_hash = fs.readFileSync('code_hash.txt','utf8');
 // console.log (code_hash);
 console.log ('parameter on:', parameterr);
