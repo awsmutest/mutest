@@ -2,21 +2,21 @@
 
 var express = require('express');
 var app = express();
-require('dotenv').config()
+require('dotenv').config({ path: '/home/node/app'})
 const path = require('path')
 var fs = require('fs');
 
 console.log('change')
-var parameterr = fs.readFileSync('.env','utf8');
+// var parameterr = fs.readFileSync('.env','utf8');
 // var code_hash = fs.readFileSync('code_hash.txt','utf8');
 // console.log (code_hash);
 console.log(path.resolve(process.cwd(), '.env'))
-console.log ('parameter on:', parameterr);
+console.log ('parameter on:', process.env.PARAMETER);
 console.log('The IPADDRESS is:', process.env.IP);
 console.log('The message is:', process.env.AZ);
 // console.log('The hash is: %s', code_hash);
 //console.log(process.env.PARAMETER, 'parameter');
-//console.log(process.env, 'test3');
+console.log(process.env, 'test3');
 
 var ipaddress = process.env.IP;
 var message = process.env.parameter;
