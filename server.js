@@ -2,7 +2,7 @@
 
 var express = require('express');
 var app = express();
-require('dotenv').config({ path: '/home/node/app'})
+require('dotenv').config({ path: '/home/node/app/.env'})
 const path = require('path')
 var fs = require('fs');
 
