@@ -7,7 +7,7 @@ const path = require('path')
 var fs = require('fs');
 
 console.log('change')
-// var parameterr = fs.readFileSync('.env','utf8');
+var parameterr = fs.readFileSync('.env','utf8');
 // var code_hash = fs.readFileSync('code_hash.txt','utf8');
 // console.log (code_hash);
 console.log(path.resolve(process.cwd(), '.env'))
