@@ -1,8 +1,9 @@
 // use the express framework
+// { path: '/home/node/app/.env'}
 
 var express = require('express');
 var app = express();
-require('dotenv').config({ path: '/home/node/app/.env'})
+require('dotenv').config()
 const path = require('path')
 var fs = require('fs');
 
