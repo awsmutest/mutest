@@ -11,7 +11,7 @@ var parameterr = fs.readFileSync('.env','utf8');
 // var code_hash = fs.readFileSync('code_hash.txt','utf8');
 // console.log (code_hash);
 console.log(path.resolve(process.cwd(), '.env'))
-console.log ('parameter on:', process.env.PARAMETER);
+console.log ('parameter on:', parameterr);
 console.log('The IPADDRESS is:', process.env.IP);
 console.log('The message is:', process.env.AZ);
 // console.log('The hash is: %s', code_hash);
