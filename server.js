@@ -15,7 +15,7 @@ console.log ('parameter on:', parameterr);
 console.log('The IPADDRESS is:', process.env.IP);
 console.log('The message is:', process.env.AZ);
 // console.log('The hash is: %s', code_hash);
-console.log('parameter:' ,process.env.$PARAMETER);
+console.log('parameter:' ,process.env.PARAMETER);
 console.log(process.env, 'test3');
 
 var ipaddress = process.env.IP;
